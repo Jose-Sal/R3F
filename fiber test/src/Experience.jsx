@@ -23,18 +23,23 @@
 //     </>
 // }
 //////////////////////////////////////////////////////////////////////////////////
-import {OrbitControls, ScrollControls} from '@react-three/drei'
+import {Sparkles, OrbitControls, ScrollControls} from '@react-three/drei'
 
 export default function Experience()
 {
     return<>
+
+        <color args={['#030202']} attach="background"/>
+        <directionalLight position={[1,2,3]} intensity={1}/>
+        {/* <ambientLight intensity={0.5} /> */}
         <OrbitControls enableZoom={false}/>
         <ambientLight intensity={1} />
         <ScrollControls pages={3} damping={0.25}>
             <mesh>
-                <boxGeometry />
-                <meshBasicMaterial color={"green"}/>
+                <sphereGeometry />
+                <meshStandardMaterial color={"green"}/>
             </mesh>
+            <Sparkles size={6} scale={[200,200,400]} position-z={-5} speed={2} count={1000}/>
         </ScrollControls>
     </>
     
