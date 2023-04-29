@@ -23,10 +23,15 @@
 //     </>
 // }
 //////////////////////////////////////////////////////////////////////////////////
-import {Sparkles, OrbitControls, ScrollControls} from '@react-three/drei'
+import {Sparkles,useTexture, useGLTF, OrbitControls, ScrollControls} from '@react-three/drei'
 
 export default function Experience()
 {
+    const {nodes} = useGLTF('./models/alltogether.glb')
+    console.log(nodes)
+    const AlderaanTexture= useTexture('./models/Alderaan.jpg')
+    AlderaanTexture.flipY=false
+    console.log(AlderaanTexture)
     return<>
 
         <color args={['#030202']} attach="background"/>
@@ -36,10 +41,13 @@ export default function Experience()
         <ambientLight intensity={1} />
         <ScrollControls pages={3} damping={0.25}>
             <mesh>
-                <sphereGeometry />
+                {/* <sphereGeometry /> */}
                 <meshStandardMaterial color={"green"}/>
             </mesh>
             <Sparkles size={6} scale={[200,200,400]} position-z={-5} speed={2} count={1000}/>
+            <mesh geometry={nodes.Alderaan.geometry}>
+                <meshBasicMaterial map={AlderaanTexture} />
+            </mesh>
         </ScrollControls>
     </>
     
