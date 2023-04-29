@@ -17,7 +17,7 @@ const root = ReactDOM.createRoot(document.querySelector('#root'))
 root.render(
     // <>
     /* canvas parent is the root fropm the html file */
-        <Canvas>
+        <Canvas camera={{fov:45, position:[1, 2, 4]}} >
             {/* creates the object
             <mesh>
                 <torusKnotGeometry />
