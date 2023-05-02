@@ -23,8 +23,9 @@
 //     </>
 // }
 //////////////////////////////////////////////////////////////////////////////////
-import {Sparkles,useTexture, useGLTF, OrbitControls, ScrollControls} from '@react-three/drei'
+import {Html, Sparkles,useTexture, useGLTF, OrbitControls, ScrollControls} from '@react-three/drei'
 import { Planets } from './components/Planets'
+import { Overlay } from './components/Overlay'
 
 export default function Experience()
 {
@@ -36,7 +37,7 @@ export default function Experience()
     console.log(AlderaanTexture)
     return<>
         {/* have the background be a dark color */}
-        <color args={['#030202']} attach="background"/>
+        <color args={['#030202']} attach ="background"/>
         {/* directional light to have a glare on the planet  */}
         <directionalLight position={[1,2,3]} intensity={1}/>
         {/* <ambientLight intensity={0.5} /> */}
@@ -55,7 +56,10 @@ export default function Experience()
             {/* <mesh geometry={nodes.Alderaan.geometry}>
                 <meshBasicMaterial map={AlderaanTexture} />
             </mesh> */}
+            {/* <Overlay /> */}
             <Planets />
+            {/* <Html>Test</Html> */}
+            
         </ScrollControls>
     </>
     

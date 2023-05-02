@@ -5,7 +5,7 @@ Command: npx gltfjsx@6.1.4 public/models/alltogether.glb
 
 import React, { useLayoutEffect, useRef } from 'react'
 import gsap from "gsap";
-import { useGLTF, useScroll } from '@react-three/drei'
+import { Text, Html, useGLTF, useScroll } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 
 export const PLANET_HEIGHT=2.5;
@@ -16,8 +16,16 @@ export function Planets(props) {
   const ref = useRef();
   const tl = useRef();
   
+  //cureent scorll of the page
   const scroll = useScroll();
+  const tatooine = useRef();
+  const Bespin = useRef();
+  const Dagobah = useRef();
+  const YavinIV = useRef();
+  const Alderaan = useRef();
+  const Hoth = useRef();
 
+  
   useFrame(()=>{
     tl.current.seek(scroll.offset * tl.current.duration());
   });
@@ -26,23 +34,93 @@ export function Planets(props) {
     tl.current = gsap.timeline();
     // vertical animation
     tl.current.to(ref.current.position, {
-        duration:2, y: -PLANET_HEIGHT * (NB_PLANETS-1),
+        duration:5, y: -PLANET_HEIGHT * (NB_PLANETS-1),
     },
     0
     );
+
+    // TO ANIMATE EACH PLANETS
+    // tl.current.from(
+    //   Bespin.current.position,{duration:0.5, x:-2,}, 0.5
+    // );
+
   }, []);
 
   return (
     <group {...props} dispose={null} ref={ref}>
-      <mesh geometry={nodes.Bespin.geometry} material={materials['Material.001']} position={[1, 3, 0]} />
-      <mesh geometry={nodes.Alderaan.geometry} material={materials['Material.001']} position={[1, 15, 0]} />
-      <mesh geometry={nodes.Dagobah.geometry} material={materials['Material.002']} position={[1, 6, 0]} />
-      <mesh geometry={nodes.Endor.geometry} material={materials['Material.003']} position={[1, 0, 0]} />
-      <mesh geometry={nodes.Hoth.geometry} material={materials['Material.004']} position={[1, 9, 0]}/>
-      <mesh geometry={nodes.YavinIV.geometry} material={materials['Material.005']} position={[1, 12, 0]} />
-      <mesh geometry={nodes.tatooine.geometry} material={materials['Material.007']} position={[1, 18, 0]} />
+      {/* each model object are in serperate group for the animation */}
+      
+      <mesh geometry={nodes.Endor.geometry} material={materials['Material.003']} position={[1, 0, 0]}>
+      {/* <Html 
+        position={[-3,0,0]}
+        wrapperClass='label'
+        center
+        
+      >TEST</Html> */}
+      <Text position={[-2,0,0]}>Hello</Text>
+      </mesh>
+      
+      <group position={[1, 3, 0]} >
+        <group ref={Bespin}>
+          <mesh geometry={nodes.Bespin.geometry} material={materials['Material.001']}>
+          {/* <Html 
+        position={[-3,0,0]}
+        wrapperClass='label'
+        center
+        
+      >TEST</Html> */}
+      <Text position={[-2,0,0]}>Hello</Text>
+          </mesh>
+        </group>
+      </group>
+
+      <group position={[1, 6, 0]}>
+        <group ref={Dagobah}>
+          <mesh geometry={nodes.Dagobah.geometry} material={materials['Material.002']}> 
+          <Text position={[-2,0,0]}>Hello</Text>
+          </mesh>
+        </group>
+        
+      </group>
+      
+      <group position={[1, 9, 0]}>
+        <group ref={Hoth}>
+          <mesh geometry={nodes.Hoth.geometry} material={materials['Material.004']}>
+          <Text position={[-2,0,0]}>Hello</Text>  
+          </mesh>
+        </group>
+        
+      </group>
+      
+      <group position={[1, 12, 0]}>
+        <group ref={YavinIV}>
+          <mesh geometry={nodes.YavinIV.geometry} material={materials['Material.005']}>
+          <Text position={[-2,0,0]}>Hello</Text>
+          </mesh>
+        </group>
+        
+      </group>
+      
+      <group position={[1, 15, 0]}>
+        <group ref={Alderaan}>
+          <mesh geometry={nodes.Alderaan.geometry} material={materials['Material.001']}>
+          <Text position={[-2,0,0]}>Hello</Text>
+          </mesh>
+        </group>
+        
+      </group>
+      
+      <group position={[1, 18, 0]} >
+        <group ref={tatooine}>
+          <mesh geometry={nodes.tatooine.geometry} material={materials['Material.007']}>
+          <Text position={[-2,0,0]}>Hello</Text>
+          </mesh>
+        </group>
+        
+      </group>
+      
     </group>
-  )
+  );
 }
 
 useGLTF.preload('/models/alltogether.glb')

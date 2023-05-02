@@ -16,8 +16,8 @@ const root = ReactDOM.createRoot(document.querySelector('#root'))
 // will be using hooks which are specific to r3f
 root.render(
     // <>
-    /* canvas parent is the root fropm the html file */
-        <Canvas camera={{fov:45, position:[1, 2, 4]}} >
+    /* canvas parent is the root fropm the html file  and changing the camera FOV and position*/
+        <Canvas camera={{fov:45}} >
             {/* creates the object
             <mesh>
                 <torusKnotGeometry />
