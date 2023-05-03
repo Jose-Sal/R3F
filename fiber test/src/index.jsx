@@ -18,11 +18,7 @@ root.render(
     // <>
     /* canvas parent is the root fropm the html file  and changing the camera FOV and position*/
         <Canvas camera={{fov:45}} >
-            {/* creates the object
-            <mesh>
-                <torusKnotGeometry />
-                <meshNormalMaterial />
-            </mesh> */}
+            {/* creates the object*/}
             <Experience />
         </Canvas>
     // </>

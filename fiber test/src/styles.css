@@ -1,0 +1,157 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap" );
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+
+/* following the tutorial */
+/*  */
+/* html,
+body,
+#root{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+body{
+    color: white;
+    
+}
+
+.label > div{
+    position: absolute;
+    background: grey;
+    color: white;
+    padding: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-radius: 30px;
+    user-select: none;
+} */
+body {
+    /* background:rgb(51, 51, 51); */
+    background-image: linear-gradient(to right, red,black,black,black, blue), url(images/stars.jpg);
+  /* create the grid layout for header main and the content */
+    display: grid;
+  /* set the height of each row */
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0px 10px;
+    color: yellow;
+  }
+  header {
+    background-color: #1d1d1d;
+    color: #fff;
+  /*  */
+    grid-row: 1;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    margin-left: 1rem;
+  }
+  
+  nav a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  main {
+    grid-row: 2;
+    display: grid;
+  /* adjust the sizes of the screen size(8183470340) */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 2rem;
+  }
+  
+  section {
+    background-color: lightblue;
+    padding: 1rem;
+  }
+  
+  section h2 {
+    margin-top: 0;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    /* grid-row: 4; */
+    text-align: center;
+    padding: 1rem;
+  }
+  
+  /* /////////////////////////////////////////////// */
+  /* for the index.html page */
+  /* for the hero image */
+  .hero-image{
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/mainHeroImg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+    background-attachment: fixed;
+    height: 80vh;
+  }
+  .hero-image .hero-text{
+    color: white;
+    text-align: center;
+  
+  }
+  .hero-text h1{
+    font-size: 50px;
+    font-weight: 500;
+  }
+  .hero-text p{
+    font-size: 30px;
+    font-weight: 30px;
+  
+  }
+  
+  .hero-btn{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(68, 208, 255);
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  .hero-btn:hover{
+    background-color: white;
+    color: black;
+  }
+  
+  /* information below the hero image */
+  .image-and-text {
+    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/mainHeroImg.jpg); */
+    padding: 10px 0px;
+    display: flex;
+    align-items: center;
+  }
+  .image-and-text img {
+    margin-right: 10px;
+    max-width: 50%;
+    height: auto;
+  }

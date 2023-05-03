@@ -45,7 +45,7 @@ export default function Experience()
         <OrbitControls enableZoom={false}/>
         <ambientLight intensity={1} />
         {/* expect to scroll 8 times */}
-        <ScrollControls pages={8} damping={10}>
+        <ScrollControls pages={9} damping={10}>
             <mesh>
                 {/* <sphereGeometry /> */}
                 <meshStandardMaterial color={"green"}/>

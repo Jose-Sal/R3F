@@ -9,7 +9,7 @@ import { Text, Html, useGLTF, useScroll } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber';
 
 export const PLANET_HEIGHT=2.5;
-export const NB_PLANETS=8;
+export const NB_PLANETS=9;
 
 export function Planets(props) {
   const { nodes, materials } = useGLTF('./models/alltogether.glb')
@@ -50,6 +50,8 @@ export function Planets(props) {
     <group {...props} dispose={null} ref={ref}>
       {/* each model object are in serperate group for the animation */}
       
+      <Text position={[0,20,0]}>COMING SOON</Text>
+
       <mesh geometry={nodes.Endor.geometry} material={materials['Material.003']} position={[1, 0, 0]}>
       {/* <Html 
         position={[-3,0,0]}
@@ -57,7 +59,7 @@ export function Planets(props) {
         center
         
       >TEST</Html> */}
-      <Text position={[-2,0,0]}>Hello</Text>
+      <Text position={[-4,0,0]}>Hello</Text>
       </mesh>
       
       <group position={[1, 3, 0]} >
@@ -69,7 +71,7 @@ export function Planets(props) {
         center
         
       >TEST</Html> */}
-      <Text position={[-2,0,0]}>Hello</Text>
+      <Text position={[-4,0,0]}>Hello</Text>
           </mesh>
         </group>
       </group>
@@ -77,7 +79,7 @@ export function Planets(props) {
       <group position={[1, 6, 0]}>
         <group ref={Dagobah}>
           <mesh geometry={nodes.Dagobah.geometry} material={materials['Material.002']}> 
-          <Text position={[-2,0,0]}>Hello</Text>
+          <Text position={[-4,0,0]}>Hello</Text>
           </mesh>
         </group>
         
@@ -86,7 +88,7 @@ export function Planets(props) {
       <group position={[1, 9, 0]}>
         <group ref={Hoth}>
           <mesh geometry={nodes.Hoth.geometry} material={materials['Material.004']}>
-          <Text position={[-2,0,0]}>Hello</Text>  
+          <Text position={[-4,0,0]}>Hello</Text>  
           </mesh>
         </group>
         
@@ -95,7 +97,7 @@ export function Planets(props) {
       <group position={[1, 12, 0]}>
         <group ref={YavinIV}>
           <mesh geometry={nodes.YavinIV.geometry} material={materials['Material.005']}>
-          <Text position={[-2,0,0]}>Hello</Text>
+          <Text position={[-4,0,0]}>Hello</Text>
           </mesh>
         </group>
         
@@ -104,7 +106,7 @@ export function Planets(props) {
       <group position={[1, 15, 0]}>
         <group ref={Alderaan}>
           <mesh geometry={nodes.Alderaan.geometry} material={materials['Material.001']}>
-          <Text position={[-2,0,0]}>Hello</Text>
+          <Text position={[-4,0,0]}>Hello</Text>
           </mesh>
         </group>
         
@@ -113,7 +115,7 @@ export function Planets(props) {
       <group position={[1, 18, 0]} >
         <group ref={tatooine}>
           <mesh geometry={nodes.tatooine.geometry} material={materials['Material.007']}>
-          <Text position={[-2,0,0]}>Hello</Text>
+          <Text position={[-4,0,0]}>Hello</Text>
           </mesh>
         </group>
         
