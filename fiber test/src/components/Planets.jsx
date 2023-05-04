@@ -38,12 +38,6 @@ export function Planets(props) {
     },
     0
     );
-
-    // TO ANIMATE EACH PLANETS
-    // tl.current.from(
-    //   Bespin.current.position,{duration:0.5, x:-2,}, 0.5
-    // );
-
   }, []);
 
   return (
@@ -53,24 +47,12 @@ export function Planets(props) {
       <Text position={[0,20,0]}>COMING SOON</Text>
 
       <mesh geometry={nodes.Endor.geometry} material={materials['Material.003']} position={[1, 0, 0]}>
-      {/* <Html 
-        position={[-3,0,0]}
-        wrapperClass='label'
-        center
-        
-      >TEST</Html> */}
       <Text position={[-4,0,0]}>Hello</Text>
       </mesh>
       
       <group position={[1, 3, 0]} >
         <group ref={Bespin}>
           <mesh geometry={nodes.Bespin.geometry} material={materials['Material.001']}>
-          {/* <Html 
-        position={[-3,0,0]}
-        wrapperClass='label'
-        center
-        
-      >TEST</Html> */}
       <Text position={[-4,0,0]}>Hello</Text>
           </mesh>
         </group>

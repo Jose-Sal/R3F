@@ -56,7 +56,7 @@ export default function Experience()
             {/* <mesh geometry={nodes.Alderaan.geometry}>
                 <meshBasicMaterial map={AlderaanTexture} />
             </mesh> */}
-            {/* <Overlay /> */}
+            <Overlay />
             <Planets />
             {/* <Html>Test</Html> */}
             

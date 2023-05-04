@@ -1,10 +1,11 @@
 import './style.css'
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
-import { TorusKnotGeometry } from 'three'
+// import { TorusKnotGeometry } from 'three'
 // dont forget to add jsx right after the Experience import
 import Experience from './Experience.jsx'
-
+import Interface from './Interface.jsx'
+import { Overlay } from './components/Overlay'
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 // we didnt have to create the scene
@@ -20,6 +21,10 @@ root.render(
         <Canvas camera={{fov:45}} >
             {/* creates the object*/}
             <Experience />
+            {/* <Interface /> */}
+            {/* <Overlay /> */}
         </Canvas>
+
+        // <Interface />
     // </>
 )
