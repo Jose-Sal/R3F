@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 // import { TorusKnotGeometry } from 'three'
 // dont forget to add jsx right after the Experience import
 import Experience from './Experience.jsx'
-import Interface from './Interface.jsx'
+// import Interface from './Interface.jsx'
 import { Overlay } from './components/Overlay'
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
