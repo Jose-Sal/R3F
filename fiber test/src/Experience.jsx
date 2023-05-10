@@ -6,11 +6,11 @@ import { Overlay } from './components/Overlay'
 export default function Experience()
 {
     // get our model objects and convert to node
-    const {nodes} = useGLTF('./models/alltogether.glb')
-    console.log(nodes)
-    const AlderaanTexture= useTexture('./models/Alderaan.jpg')
-    AlderaanTexture.flipY=false
-    console.log(AlderaanTexture)
+    // const {nodes} = useGLTF('./models/alltogether.glb')
+    // console.log(nodes)
+    // const AlderaanTexture= useTexture('./models/Alderaan.jpg')
+    // AlderaanTexture.flipY=false
+    // console.log(AlderaanTexture)
     return<>
         {/* have the background be a dark color */}
         <color args={['#030202']} attach ="background"/>
