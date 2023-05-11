@@ -12,8 +12,8 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="people.html">Characters</a></li>
+        <li><a href="#top">Home</a></li>
+        <li><a href="#Characters">Characters</a></li>
         <li><a href="R3F.html">Planets</a></li>
         <li><a href="R3FFilms.html">Films</a></li>
         <li><a href="starships.html">Starships</a></li>
@@ -21,7 +21,7 @@
     </nav>
   </header>
 
-  <div class="hero-image">
+  <div id="top" class="hero-image">
     <div class="hero-text">
       <h1>Welcome to Star-Info</h1>
       <p>the ultimate resource for everything Star Wars! Whether you're a die-hard fan or a casual viewer, our website has everything you need to satisfy your Star Wars cravings.</p>
@@ -35,16 +35,18 @@
     <p>Explore our extensive database of information on the characters, planets, and films of the Star Wars universe. Learn about the iconic heroes and villains that have captured our imaginations for generations, discover the rich history and culture of the many planets and locations in the Star Wars universe, and delve into the fascinating backstory and lore of the films that have become a cultural phenomenon.</p>
   </div>
 
-	<h1>Star Wars Characters</h1>
+	<h1 id="Characters">Star Wars Characters</h1>
   <div id="results" class="card-columns"></div>
 
   <h1>Starships</h1>
-
+  <a href="Experiment.html">Experiement</a>
   <footer>
     <p>Copyright © 2023</p>
   </footer>
-  <!-- <script src="Script.js"></script> -->
+
+  <!-- bootstrap CDN -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
   <script src="people.jsx"></script>
 </body>
 </html>

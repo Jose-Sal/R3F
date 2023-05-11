@@ -2,6 +2,8 @@ import {Html, Sparkles,useTexture, useGLTF, OrbitControls, ScrollControls} from 
 import { FilmOverlay } from './components/FilmOverlay'
 // import { Overlay } from './components/Overlay'
 import { Overlay } from './components/Overlay'
+import { Canvas, useFrame } from '@react-three/fiber'
+
 
 export default function FilmExperience()
 {
@@ -15,7 +17,9 @@ export default function FilmExperience()
             {/* creates the object*/}
             <mesh  position={[-2,0,0]}>
                 <boxGeometry />
-                <meshStandardMaterial color={"green"}/>
+                <meshStandardMaterial color={"red"}/>
+                
+                {/* onPointerOver={(e) => console.log('over')} */}
             </mesh>
             <mesh  position={[0,0,0]}>
                 <boxGeometry />
@@ -40,7 +44,8 @@ export default function FilmExperience()
             </mesh>
             {/* <Overlay /> */}
             {/* <Interface /> */}
-        <FilmOverlay />
+            <OrbitControls />
+        {/* <FilmOverlay /> */}
         </ScrollControls>
         
     </>
