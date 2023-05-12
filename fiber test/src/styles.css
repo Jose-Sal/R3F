@@ -1,80 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap" );
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-/* following the tutorial */
-/*  */
-/* html,
-body,
-#root{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-body{
-    color: white;
-    
-}
-
-.label > div{
-    position: absolute;
-    background: grey;
-    color: white;
-    padding: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    border-radius: 30px;
-    user-select: none;
-} */
 body {
-    /* background:rgb(51, 51, 51); */
-    /* background-image: linear-gradient(to right, red,black,black,black, blue), url(Images/Stars.jpg); */
-    background-image: url(Images/Stars.jpg);
-    background-repeat: repeat;
-  /* create the grid layout for header main and the content */
-    /* display: grid; */
-  /* set the height of each row */
-    /* grid-template-rows: auto 1fr auto; */
-    /* min-height: 100vh; */
-    margin: 0;
-    padding: 0px;
-    color: yellow;
-    font-size: 20px;
-  }
-  /* header { */
-    /* background-color: #1d1d1d; */
-    /* color: #fff; */
-  /*  */
-    /* grid-row: 1; */
-  /* } */
-  
-  /* nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-  
-  nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    margin-left: 1rem;
-  }
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-  } */
- /* position the navigation bar fixed to the top of the page */
+  background-image: url(Images/Stars.jpg);
+  background-repeat: repeat;
+  margin: 0;
+  padding: 0px;
+  color: yellow;
+  font-size: 20px;
+}
+/* position the navigation bar fixed to the top of the page */
 .navbar {
   position: fixed;
   top: 0;
@@ -103,56 +37,52 @@ body {
 .navbar a {
   color: #fff;
   text-decoration: none;
-} */
-#Head {
+}
+*/ #Head {
   padding-top: 50px;
 }
 
-  main {
-    grid-row: 2;
-    display: grid;
-  /* adjust the sizes of the screen size(8183470340) */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    grid-gap: 2rem;
-    padding: 2rem;
-  }
-  
-  section {
-    background-color: lightblue;
-    padding: 1rem;
-  }
-  
-  section h2 {
-    margin-top: 0;
-  }
-  
-  footer {
-    background-color: #333;
-    color: #fff;
-    /* grid-row: 4; */
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  /* /////////////////////////////////////////////// */
-  /* for the index.html page */
-  /* for the hero image */
-  .hero-image{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Images/mainHeroImg.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* overflow:hidden; */
-    background-attachment: fixed;
-    height: 100vh;
-  }
+main {
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+  padding: 2rem;
+}
 
+section {
+  background-color: lightblue;
+  padding: 1rem;
+}
 
+section h2 {
+  margin-top: 0;
+}
 
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* /////////////////////////////////////////////// */
+/* for the index.html page */
+/* for the hero image */
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(Images/mainHeroImg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* overflow:hidden; */
+  background-attachment: fixed;
+  height: 100vh;
+}
 
 /* Slideshow */
 .slideshow-container {
@@ -174,93 +104,92 @@ body {
 }
 
 @-webkit-keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
+.hero-image .hero-text {
+  color: white;
+  text-align: center;
+}
+.hero-text h1 {
+  font-size: 50px;
+  font-weight: 500;
+}
+.hero-text p {
+  font-size: 30px;
+  font-weight: 30px;
+}
 
+.hero-btn {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(68, 208, 255);
+  padding: 10px 30px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+}
+.hero-btn:hover {
+  background-color: white;
+  color: black;
+}
 
+/* information below the hero image */
+.image-and-text {
+  /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/mainHeroImg.jpg); */
+  padding: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+.image-and-text img {
+  margin-right: 10px;
+  max-width: 50%;
+  height: auto;
+}
 
+.GridCharacterShips ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  list-style: none;
+  padding: 0;
+}
 
-  .hero-image .hero-text{
-    color: white;
-    text-align: center;
-  
-  }
-  .hero-text h1{
-    font-size: 50px;
-    font-weight: 500;
-  }
-  .hero-text p{
-    font-size: 30px;
-    font-weight: 30px;
-  
-  }
-  
-  .hero-btn{
-    text-decoration: none;
-    color: white;
-    background-color: rgb(68, 208, 255);
-    padding: 10px 30px;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: inline-block;
-  }
-  .hero-btn:hover{
-    background-color: white;
-    color: black;
-  }
-  
-  /* information below the hero image */
-  .image-and-text {
-    /* background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/mainHeroImg.jpg); */
-    padding: 10px 0px;
-    display: flex;
-    align-items: center;
-  }
-  .image-and-text img {
-    margin-right: 10px;
-    max-width: 50%;
-    height: auto;
-  }
+.GridCharacterShips li {
+  padding: 1rem;
+  border: 1px solid #ffd500;
+  background-color: black;
+  border-radius: 10px;
+}
+button {
+  background-color: #0074d9;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto;
+  display: block;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+}
 
-
-
-
-  .GridCharacterShips ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 1rem;
-    list-style: none;
-    padding: 0;
-  }
-
-  .GridCharacterShips li {
-    padding: 1rem;
-    border: 1px solid #ffd500;
-    background-color: black;
-    border-radius: 10px;
-  }
-  button {
-      background-color: #0074D9;
-      border: none;
-      color: #fff;
-      padding: 0.5rem 1rem;
-      margin: 1rem auto;
-      display: block;
-      border-radius: 0.25rem;
-      font-size: 1rem;
-    }
-
-    button:hover {
-      cursor: pointer;
-      opacity: 0.8;
-    }
+button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
 
 /* set a max-width for the content area */
 .content {
