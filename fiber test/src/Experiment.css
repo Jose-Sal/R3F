@@ -24,17 +24,3 @@ li {
   margin: 0;
   padding: 10px;
 }
-/* ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1rem;
-  list-style: none;
-  padding: 0;
-}
-
-.GridCharacterShips li {
-  padding: 1rem;
-  border: 1px solid #ffd500;
-  background-color: black;
-  border-radius: 10px;
-} */

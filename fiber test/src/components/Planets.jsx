@@ -47,13 +47,13 @@ export function Planets(props) {
       <Text position={[0,20,0]}>COMING SOON</Text>
 
       <mesh geometry={nodes.Endor.geometry} material={materials['Material.003']} position={[1, 0, 0]}>
-      <Text position={[-4,0,0]}>Hello</Text>
+      <Text position={[-4,0,0]}>Endor</Text>
       </mesh>
       
       <group position={[1, 3, 0]} >
         <group ref={Bespin}>
           <mesh geometry={nodes.Bespin.geometry} material={materials['Material.001']}>
-      <Text position={[-4,0,0]}>Hello</Text>
+      <Text position={[-4,0,0]}>Bespin</Text>
           </mesh>
         </group>
       </group>
@@ -61,7 +61,7 @@ export function Planets(props) {
       <group position={[1, 6, 0]}>
         <group ref={Dagobah}>
           <mesh geometry={nodes.Dagobah.geometry} material={materials['Material.002']}> 
-          <Text position={[-4,0,0]}>Hello</Text>
+          <Text position={[-3.5,0,0]}>Dagobah</Text>
           </mesh>
         </group>
         
@@ -70,7 +70,7 @@ export function Planets(props) {
       <group position={[1, 9, 0]}>
         <group ref={Hoth}>
           <mesh geometry={nodes.Hoth.geometry} material={materials['Material.004']}>
-          <Text position={[-4,0,0]}>Hello</Text>  
+          <Text position={[-4,0,0]}>Hoth</Text>  
           </mesh>
         </group>
         
@@ -79,7 +79,7 @@ export function Planets(props) {
       <group position={[1, 12, 0]}>
         <group ref={YavinIV}>
           <mesh geometry={nodes.YavinIV.geometry} material={materials['Material.005']}>
-          <Text position={[-4,0,0]}>Hello</Text>
+          <Text position={[-4,0,0]}>YavinIV</Text>
           </mesh>
         </group>
         
@@ -88,7 +88,7 @@ export function Planets(props) {
       <group position={[1, 15, 0]}>
         <group ref={Alderaan}>
           <mesh geometry={nodes.Alderaan.geometry} material={materials['Material.001']}>
-          <Text position={[-4,0,0]}>Hello</Text>
+          <Text position={[-3.5,0,0]}>Alderaan</Text>
           </mesh>
         </group>
         
@@ -97,7 +97,7 @@ export function Planets(props) {
       <group position={[1, 18, 0]} >
         <group ref={tatooine}>
           <mesh geometry={nodes.tatooine.geometry} material={materials['Material.007']}>
-          <Text position={[-4,0,0]}>Hello</Text>
+          <Text position={[-3.5,0,0]}>tatooine</Text>
           </mesh>
         </group>
         
