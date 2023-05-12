@@ -32,7 +32,9 @@ body{
 } */
 body {
     /* background:rgb(51, 51, 51); */
-    background-image: linear-gradient(to right, red,black,black,black, blue), url(images/stars.jpg);
+    /* background-image: linear-gradient(to right, red,black,black,black, blue), url(Images/Stars.jpg); */
+    background-image: url(Images/Stars.jpg);
+    background-repeat: repeat;
   /* create the grid layout for header main and the content */
     /* display: grid; */
   /* set the height of each row */
@@ -41,6 +43,7 @@ body {
     margin: 0;
     padding: 0px;
     color: yellow;
+    font-size: 20px;
   }
   /* header { */
     /* background-color: #1d1d1d; */
@@ -135,18 +138,55 @@ body {
   /* for the index.html page */
   /* for the hero image */
   .hero-image{
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(images/mainHeroImg.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(Images/mainHeroImg.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* height: 100%; */
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow:hidden;
+    /* overflow:hidden; */
     background-attachment: fixed;
-    height: 80vh;
+    height: 100vh;
   }
+
+
+
+
+/* Slideshow */
+.slideshow-container {
+  max-width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+
   .hero-image .hero-text{
     color: white;
     text-align: center;
@@ -204,6 +244,7 @@ body {
     padding: 1rem;
     border: 1px solid #ffd500;
     background-color: black;
+    border-radius: 10px;
   }
   button {
       background-color: #0074D9;
@@ -226,4 +267,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  border-left: 2px solid #ffd500;
+  border-right: 2px solid #ffd500;
+  padding: 0px 10%;
 }
