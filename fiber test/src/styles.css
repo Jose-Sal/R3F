@@ -34,22 +34,22 @@ body {
     /* background:rgb(51, 51, 51); */
     background-image: linear-gradient(to right, red,black,black,black, blue), url(images/stars.jpg);
   /* create the grid layout for header main and the content */
-    display: grid;
+    /* display: grid; */
   /* set the height of each row */
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;
+    /* grid-template-rows: auto 1fr auto; */
+    /* min-height: 100vh; */
     margin: 0;
-    padding: 0px 10px;
+    padding: 0px;
     color: yellow;
   }
-  header {
-    background-color: #1d1d1d;
-    color: #fff;
+  /* header { */
+    /* background-color: #1d1d1d; */
+    /* color: #fff; */
   /*  */
-    grid-row: 1;
-  }
+    /* grid-row: 1; */
+  /* } */
   
-  nav {
+  /* nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,8 +70,41 @@ body {
   nav a {
     color: #fff;
     text-decoration: none;
-  }
-  
+  } */
+ /* position the navigation bar fixed to the top of the page */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #333;
+}
+
+/* center the list items horizontally */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+}
+
+/* style the list items */
+.navbar li {
+  list-style: none;
+  margin: 0 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+} */
+#Head {
+  padding-top: 50px;
+}
+
   main {
     grid-row: 2;
     display: grid;
@@ -155,3 +188,42 @@ body {
     max-width: 50%;
     height: auto;
   }
+
+
+
+
+  .GridCharacterShips ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+
+  .GridCharacterShips li {
+    padding: 1rem;
+    border: 1px solid #ffd500;
+    background-color: black;
+  }
+  button {
+      background-color: #0074D9;
+      border: none;
+      color: #fff;
+      padding: 0.5rem 1rem;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+    }
+
+    button:hover {
+      cursor: pointer;
+      opacity: 0.8;
+    }
+
+/* set a max-width for the content area */
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}

@@ -1,13 +1,3 @@
-// import Vue from 'vue';
-// import MyVueR3FComponent from './vueComponent.js'
-
-// new Vue({
-//   el: '#app',
-//   components: {
-//     MyVueR3FComponent
-//   },
-//   template: '<MyVueR3FComponent />'
-// });
 const app = new Vue({
   el: '#app',
   data: {

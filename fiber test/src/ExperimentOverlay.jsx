@@ -44,6 +44,9 @@ export function Overlay() {
     <>
     {/* <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script> */}
       <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}>
+      <div style={{ position: 'absolute', top: 20, left: 25, fontSize: '25px' }}>
+        <a href="index.html">Go back</a>
+      </div>
       <div style={{ position: 'absolute', top: 40, left: 100, fontSize: '25px' }}>Click on the Film</div>
       </div>
       <div className="info">
