@@ -1,4 +1,5 @@
 import { Scroll } from "@react-three/drei"
+// shows the header withint the canvas
 export const Overlay=()=>{
     return (
     <Scroll html >
