@@ -16,31 +16,34 @@
     <title></title>
   </head>
   <body>
+    <!-- Navigation bar -->
     <div id="Head">
       <header>
         <nav class="navbar">
           <ul>
             <li><a href="#top">Home</a></li>
             <li><a href="#Characters">Characters</a></li>
+            <li><a href="#Starships">Starships</a></li>
             <li><a href="R3F.html">Planets</a></li>
             <li><a href="Experiment.html">Films</a></li>
-            <li><a href="#Starships">Starships</a></li>
+            
           </ul>
         </nav>
       </header>
     </div>
 
-    <!-- start oif hero image -->
+    <!-- start of hero image -->
     <div id="top" class="hero-image">
       <div class="hero-text">
+        <!-- Heading and description -->
         <h1>Welcome to Star-Info</h1>
         <p>
           the ultimate resource for everything Star Wars! Whether you're a
           die-hard fan or a casual viewer, our website has everything you need
           to satisfy your Star Wars cravings.
         </p>
-        <a href="#" class="hero-btn"> and maybe a link</a>
       </div>
+      <!-- Slideshow container -->
       <div class="slideshow-container">
         <div
           class="mySlides fade"
@@ -52,8 +55,8 @@
       </div>
     </div>
     <!-- end of hero image -->
-
-    <div class="content">
+      <!-- Section with an image and text -->
+      <div class="content">
       <div class="image-and-text">
         <img
           src="Images/starWarsLogoWithHeroes.jpg"
@@ -69,7 +72,7 @@
           cultural phenomenon.
         </p>
       </div>
-
+      <!-- Section for listing Star Wars characters and the films they were in -->
       <div id="results" class="card-columns"></div>
       <!-- using vue for listing the characters name and films they were in -->
       <div class="GridCharacterShips">
@@ -85,7 +88,7 @@
               </ul>
             </li>
           </ul>
-          <!-- place 2 buttons for the prev and next page of characters -->
+          <!-- Buttons for navigating between previous and next pages of characters -->
           <div v-if="prevPage || nextPage">
             <button v-if="prevPage" @click="loadCharacters(prevPage)">
               Previous Page
@@ -99,6 +102,7 @@
       </div>
 
       <!-- ---------------------------------------------- -->
+      <!-- Section for listing Star Wars starships -->
       <h1 id="Starships">Starships</h1>
       <!-- using vue for listing the Star name and films they were in -->
       <div class="GridCharacterShips">
@@ -111,6 +115,7 @@
               <p>Model: {{ starship.model }}</p>
             </li>
           </ul>
+          <!-- Buttons for navigating between previous and next pages of starships -->
           <div v-if="prevPage || nextPage">
             <button v-if="prevPage" @click="loadStarships(prevPage)">
               Previous Page

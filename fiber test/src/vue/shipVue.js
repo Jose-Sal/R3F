@@ -1,31 +1,23 @@
-const shipVue = new Vue({
+// Creating a new Vue instance
+const shipVue = new Vue({// Binding the Vue instance to the HTML element with the id 'ShipApp'
     el: '#ShipApp',
     data: {
-      starships: [],
-      prevPage: null,
-      nextPage: null,
-      currentPage: 'https://swapi.dev/api/starships/'
+      starships: [],// Array to store the starships
+      prevPage: null,// URL of the previous page of starships
+      nextPage: null,// URL of the next page of starships
+      currentPage: 'https://swapi.dev/api/starships/'// URL of the current page of starship
     },
     mounted() {
-      this.loadStarships(this.currentPage);
+    // Lifecycle hook that runs after the Vue instance is mounted
+    this.loadStarships(this.currentPage);// Calling the loadStarships method to fetch and load starships
     },
     methods: {
       loadStarships(url) {
-        // Check if the data is already cached
-        // const cachedData = localStorage.getItem(url);
-        // if (cachedData) {
-        //   const data = JSON.parse(cachedData);
-        //   this.starships = data.starships;
-        //   this.prevPage = data.prevPage;
-        //   this.nextPage = data.nextPage;
-        //   this.currentPage = url;
-        //   return;
-        // }
-        
-        // If the data is not cached, fetch it from the API
-        fetch(url)
-          .then(response => response.json())
+      // Method to fetch and load starships
+        fetch(url)// Fetching the data from the specified URL
+        .then(response => response.json())// Parsing the response as JSON
           .then(data => {
+            // Handling the retrieved data
             // Update the starships array with the fetched data
             this.starships = data.results;
             this.prevPage = data.previous;
@@ -37,19 +29,14 @@ const shipVue = new Vue({
               fetch(starship.url)
                 .then(response => response.json())
                 .then(starshipData => {
-                  starship.passengers = starshipData.passengers;
+                // Updating the starship with additional details
+                starship.passengers = starshipData.passengers;
                   starship.model = starshipData.model;
                 });
             });
-            
-            // Cache the data
-            // localStorage.setItem(url, JSON.stringify({
-            //   starships: this.starships,
-            //   prevPage: data.previous,
-            //   nextPage: data.next
-            // }));
+
           });
-      }
+        }
     }
   });
   

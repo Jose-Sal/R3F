@@ -20,7 +20,7 @@ export function Planets(props) {
   const Alderaan = useRef();
   const Hoth = useRef();
 
-  // this is how the planets will animate
+  // Update animation on each frame
   useFrame(()=>{
     tl.current.seek(scroll.offset * tl.current.duration());
     // MeshRef.current.rotation.x += .01;
@@ -29,7 +29,7 @@ export function Planets(props) {
  
   useLayoutEffect(()=> {
     tl.current = gsap.timeline();
-    // vertical animation
+    // Vertical animation of the planets
     tl.current.to(ref.current.position, {
         duration:5, y: -PLANET_HEIGHT * (NB_PLANETS-1),
     },
